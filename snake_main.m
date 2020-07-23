@@ -68,10 +68,9 @@ trainOpts = rlTrainingOptions(...
 
 doTraining = true;
 if doTraining    
-% 	load('Agent3317.mat','saved_agent');
     trainingStats = train(agent,env,trainOpts);
 else
-    % load('SCORE_OF_16000','saved_agent');
+    load('Agent3075.mat','agent');
 end
 % 
 % plot(env)

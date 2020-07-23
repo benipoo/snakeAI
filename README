@@ -1,29 +1,29 @@
-# 2D Snake Neural Network using Matlab r2019b ALPHA TEST
+# 2D Snake AI created using Matlab r2019b
 
 This project creates a snake trained by a neural network reinforcement learning algorithm. In this game, the snake tries to eat as much food as possible without hitting the boundaries of the box. The neural network has sixteen input neurons, and four output neurons. To make the project more simple, I currently do not feature a tail on the snake. There are 8 directions the snake looks at any given time: (North,Northeast,East,Southeast,South,Southwest,West,and Northwest). The inputs are the distances to food and distances to a wall if applicable for any given direction it looks in, else the value is a -1. While training the algorithm, a progress graph will display the effectiveness of the training. A simulation of the snake also diplays in a figure to help visualize what the neural network is "thinking" while training.
 
 ## Getting Started
 
-Helpful hints to help jumpstart your project.
+Here are some helpful hints to help jumpstart your project.
 
 ### Prerequisites
 
 You will need the latest version of Matlab, in addition to some toolboxes
 
 ```
-Matlab r2019b, Deep Learning, Reinforcement learning toolboxes
+Matlab r2019b, Deep Learning, Reinforcement learning toolboxes:
 ```
 
 ### Start up Matlab
 
 Load the files into matlab, and ensure they are all in the working directory
 
-If you want to train your own network, leave the code as is. If not, set doTraining to false on line 98. This will load a pre-trained agent to simulate.
+If you want to train your own network, leave the code as is. If not, set doTraining to false on line 69. This will load a pre-trained agent to simulate.
 
 ```
 doTraining = false;
 ```
-If you want to utilize most of your cpu cores while training, uncomment the following lines(92-95).
+If you want to utilize most of your cpu cores while training, uncomment the following lines(64-67).
 
 
 ```
@@ -39,7 +39,7 @@ There are many ways to adjust the outcome of a neural network training function
 
 ### Adjust the reward function
 
-Tinkering with the values of rewards/penalties help "guide" the snake toward the end goal. This can be done by modifying the reward function on line 152 in the snake_env.m file.
+Tinkering with the values of rewards/penalties help "guide" the snake toward the end goal. This can be done by modifying the implementation of the reward function found in the snake_env.m file.
 
 ```
 if ~done
